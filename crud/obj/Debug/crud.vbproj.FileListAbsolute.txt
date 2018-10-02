@@ -1,0 +1,15 @@
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\bin\Debug\crud.exe.config
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\bin\Debug\crud.exe
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\bin\Debug\crud.pdb
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\bin\Debug\crud.xml
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\obj\Debug\crud.vbprojResolveAssemblyReference.cache
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\obj\Debug\crud.Form1.resources
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\obj\Debug\crud.Resources.resources
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\obj\Debug\crud.vbproj.GenerateResource.Cache
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\obj\Debug\crud.exe
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\obj\Debug\crud.xml
+c:\users\kaconk\documents\visual studio 2015\Projects\crud\crud\obj\Debug\crud.pdb
+D:\Project\vb.net\crud\crud\bin\Debug\crud.exe.config
+D:\Project\vb.net\crud\crud\obj\Debug\crud.exe
+D:\Project\vb.net\crud\crud\obj\Debug\crud.xml
+D:\Project\vb.net\crud\crud\obj\Debug\crud.pdb
