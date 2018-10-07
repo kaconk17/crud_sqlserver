@@ -48,6 +48,7 @@ Partial Class Form1
         Me.btn_hapus = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.btn_update = New System.Windows.Forms.Button()
+        Me.btn_preview = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -271,11 +272,21 @@ Partial Class Form1
         Me.btn_update.Text = "Update"
         Me.btn_update.UseVisualStyleBackColor = True
         '
+        'btn_preview
+        '
+        Me.btn_preview.Location = New System.Drawing.Point(634, 332)
+        Me.btn_preview.Name = "btn_preview"
+        Me.btn_preview.Size = New System.Drawing.Size(75, 46)
+        Me.btn_preview.TabIndex = 29
+        Me.btn_preview.Text = "Preview"
+        Me.btn_preview.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(721, 477)
+        Me.Controls.Add(Me.btn_preview)
         Me.Controls.Add(Me.btn_update)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.btn_hapus)
@@ -336,4 +347,5 @@ Partial Class Form1
     Friend WithEvents btn_hapus As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents btn_update As Button
+    Friend WithEvents btn_preview As Button
 End Class

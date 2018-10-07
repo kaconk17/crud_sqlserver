@@ -10,7 +10,7 @@ Public Class Form1
         txt_nisn.Enabled = False
         DateTimePicker1.Enabled = False
         txt_sekolah.Enabled = False
-        ' btn_hapus.Enabled = False
+
         btn_simpan.Enabled = False
         btn_tampil.Enabled = False
         btn_update.Enabled = False
@@ -97,6 +97,7 @@ Public Class Form1
                     MsgBox("Simpan Data Berhasil", MsgBoxStyle.Information)
                     bersih()
                     tampil_data()
+                    awal()
                 Catch ex As Exception
                     conn.Close()
                     MsgBox(ex.Message)
@@ -127,6 +128,7 @@ Public Class Form1
                     MsgBox("Update Data Berhasil", MsgBoxStyle.Information)
                     bersih()
                     tampil_data()
+                    awal()
                 Catch ex As Exception
                     conn.Close()
                     MsgBox(ex.Message)
@@ -189,6 +191,67 @@ Public Class Form1
     Private Sub txt_nis_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_nis.KeyPress
         If e.KeyChar = Chr(13) Then
             cek_id()
+        End If
+    End Sub
+
+    Private Sub btn_preview_Click(sender As Object, e As EventArgs) Handles btn_preview.Click
+        Dim row As DataGridViewRow = DataGridView1.CurrentRow
+        Dim id As String = row.Cells(1).Value.ToString
+        Dim report_siswa As New siswa
+        Dim user As String = "sa"
+        Dim pass As String = "NPMI"
+
+        Select Case MsgBox("Apakah anda akan melihat data siswa " & id & " ?", MsgBoxStyle.YesNo)
+            Case MsgBoxResult.Yes
+
+
+                report_siswa.RecordSelectionFormula = "{biodata.nis} ='" & id & "'"
+                report_siswa.SetDatabaseLogon(user, pass)
+                preview.prev_report.ReportSource = report_siswa
+                'preview.prev_report.Refresh()
+
+                preview.Show()
+            Case MsgBoxResult.No
+
+
+        End Select
+    End Sub
+
+    Private Sub txt_nama_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_nama.KeyPress
+        If e.KeyChar = Chr(13) Then
+            txt_nisn.Focus()
+        End If
+    End Sub
+
+    Private Sub txt_nisn_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_nisn.KeyPress
+        If e.KeyChar = Chr(13) Then
+            ComboBox_kelamin.Focus()
+        End If
+    End Sub
+
+    Private Sub ComboBox_kelamin_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBox_kelamin.SelectedValueChanged
+        txt_tempatlahir.Focus()
+    End Sub
+
+    Private Sub txt_tempatlahir_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_tempatlahir.KeyPress
+        If e.KeyChar = Chr(13) Then
+            DateTimePicker1.Focus()
+        End If
+    End Sub
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        txt_agama.Focus()
+    End Sub
+
+    Private Sub txt_agama_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_agama.KeyPress
+        If e.KeyChar = Chr(13) Then
+            txt_alamat.Focus()
+        End If
+    End Sub
+
+    Private Sub txt_alamat_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_alamat.KeyPress
+        If e.KeyChar = Chr(13) Then
+            txt_sekolah.Focus()
         End If
     End Sub
 End Class
